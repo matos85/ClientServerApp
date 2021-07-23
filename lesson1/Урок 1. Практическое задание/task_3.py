@@ -1,3 +1,4 @@
+# MATOS = Артур ))
 """
 Задание 3.
 
@@ -12,12 +13,33 @@
 
 words = ['attribute', 'класс', 'функция', 'type']
 
-# for i in list_str_format:
-#     res = bytes(i, 'utf-8')
-#     list_for_byte_format.append(res)
+# вариант 1:
+
+# for i in words:
+#     if i.isascii():
+#         print(f"Слово {i} можно записать в в байтовом типе с помощью маркировки b'' потому что состояит из символов ASCII")
+#     else:
+#         print(f"Слово {i} НЕЛЬЗЯ записать в в байтовом типе с помощью маркировки b' потому что не состоит из символов ASCII'")
+#     print('-----')
+
+# вариант 2 усложненный:
+
+# if i.isascii():
+#     print(f"Слово {i} можно записать в в байтовом типе с помощью маркировки b'' потому что состояит из символов ASCII")
+# else:
+#     print(f"Слово {i} НЕЛЬЗЯ записать в в байтовом типе с помощью маркировки b' потому что не состоит из символов ASCII'")
+# print('-----')
+# print('Проверим!')
 
 
-for line in words:
-    res = bytes(line, 'utf-8')
-    print(line)
-    print(res)
+STR_WORD1 = b'attribute'
+STR_WORD2 = 'класс'
+STR_WORD3 = 'функция'
+STR_WORD4 = 'type'
+
+for i in range(1):
+    # try:
+        print(f'{STR_WORD1}')
+        print(bytes(STR_WORD1))
+    # except:
+    #     print('Ошибка')

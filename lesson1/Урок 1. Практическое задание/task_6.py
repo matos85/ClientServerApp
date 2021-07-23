@@ -23,3 +23,10 @@
 
 НАРУШЕНИЕ обозначенных условий - задание не выполнено!!!
 """
+import chardet
+
+with open('for_task_61.txt', 'br') as f:
+    for line in f:
+        util_line = chardet.detect(line)
+        line = line.decode('utf-8')
+        print(line, end='')
