@@ -23,10 +23,22 @@
 
 НАРУШЕНИЕ обозначенных условий - задание не выполнено!!!
 """
+
+# Вариент 0
+# а  так можно делать? везде откроется?
+
 import chardet
 
-with open('for_task_61.txt', 'br') as f:
+with open('for_task_6.txt', 'br') as f:
     for line in f:
         util_line = chardet.detect(line)
         line = line.decode('utf-8')
+        print(line, end='')
+
+
+
+# Вариант 1
+
+with open('for_task_6.txt', encoding='utf-8') as f:
+    for line in f:
         print(line, end='')
